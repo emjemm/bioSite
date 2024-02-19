@@ -1,0 +1,80 @@
+    /*
+      Author: Emily Johnson
+      Date: February 18, 2024
+      File Name: styles.css
+    */
+
+    /* CSS Reset */
+    body, header, nav, main, footer, img, h1, h3, ul {
+          margin: 0;
+          padding: 0;
+          border: 0;
+    }
+
+    img {
+          max-width: 100%;
+          display: block;
+    }
+
+    body {
+          font-family: Baskerville, Palatino, Arial;
+    }
+
+    nav ul {
+          list-style-type: none;
+          text-align: right;
+    }
+
+    nav li {
+          display: block;
+          font-size: 1em;
+          font-family: Baskerville, Palatino, Arial;
+          font-weight: lighter;
+          border-top-width: 0.5px;
+          color: #EEE6DE;
+          float: left;
+    }
+
+    nav li a {
+          display: block;
+          padding: 8px;
+          background-color: #DD8E75;
+    }
+
+    #logo {
+          /* I needed the logo image to be smaller so I looked up how to reduce the size https://www.shecodes.io/athena/36159-how-to-make-an-image-50-smaller-with-css#:~:text=%F0%9F%A4%96%20SheCodes%20Athena%20says%3A&text=To%20make%20an%20image%2050%25%20smaller%2C%20you%20can%20use,CSS%20with%20the%20transform%20property.&text=This%20code%20will%20set%20the,smaller%20or%20larger%20as%20needed. */
+          transform: scale(0.4);
+          position: absolute;
+          top: 0;
+          right: 0;
+    }
+
+    /*  */
+    .column {
+          float: left;
+          width: 25%;
+          padding: 10px;
+          box-sizing: border-box;
+   }
+
+   .row::after {
+          content: "";
+          clear: both;
+          display: table;
+   }
+
+    /* Style rules for footer content */
+    footer {
+          font-family: Baskerville, Palatino, Arial;
+          text-align: center;
+          font-size: 0.85em;
+          background-color: #B6594C;
+          color: #EEE6DE;
+          padding: 1% 0%;
+          /* Footer kept ending up in the very top of the page so I looked up a way to keep it at the bottom https://stackoverflow.com/questions/15960290/css-footer-not-displaying-at-the-bottom-of-the-page */
+          position:fixed;
+          left:0px;
+          bottom:0px;
+          height:30px;
+          width:100%;
+    }
