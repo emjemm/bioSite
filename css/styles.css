@@ -1,80 +1,126 @@
-    /*
-      Author: Emily Johnson
-      Date: February 18, 2024
-      File Name: styles.css
-    */
+/*
+Author: Emily Johnson
+Date: February 18, 2024
+File Name: styles.css
+*/
 
-    /* CSS Reset */
-    body, header, nav, main, footer, img, h1, h3, ul {
-          margin: 0;
-          padding: 0;
-          border: 0;
-    }
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
-    img {
-          max-width: 100%;
-          display: block;
-    }
+img {
+  max-width: 100%;
+  display: block;
+}
 
-    body {
-          font-family: Baskerville, Palatino, Arial;
-    }
+h1 {
+  padding: 2%;
+  text-align: right;
+  font-family: "The Nautigal", cursive;
+  color: #90aeb2;
+}
 
-    nav ul {
-          list-style-type: none;
-          text-align: right;
-    }
+body {
+  font-family: "Italiana", sans-serif;
+  background-color: #EEE6DE;
+}
 
-    nav li {
-          display: block;
-          font-size: 1em;
-          font-family: Baskerville, Palatino, Arial;
-          font-weight: lighter;
-          border-top-width: 0.5px;
-          color: #EEE6DE;
-          float: left;
-    }
+nav ul {
+  list-style-type: none;
+  text-align: center;
+  max-width: 100%;
+}
 
-    nav li a {
-          display: block;
-          padding: 8px;
-          background-color: #DD8E75;
-    }
+nav li {
+  display: block;
+  font-size: 1em;
+  font-family: "Raleway", sans-serif;
+  font-weight: lighter;
+  border-top-width: 0.5px;
+  color: #EEE6DE;
+}
 
-    #logo {
-          /* I needed the logo image to be smaller so I looked up how to reduce the size https://www.shecodes.io/athena/36159-how-to-make-an-image-50-smaller-with-css#:~:text=%F0%9F%A4%96%20SheCodes%20Athena%20says%3A&text=To%20make%20an%20image%2050%25%20smaller%2C%20you%20can%20use,CSS%20with%20the%20transform%20property.&text=This%20code%20will%20set%20the,smaller%20or%20larger%20as%20needed. */
-          transform: scale(0.4);
-          position: absolute;
-          top: 0;
-          right: 0;
-    }
+nav li a {
+  display: block;
+  padding: 8px;
+  background-color: #B6594C;
+}
 
-    /*  */
-    .column {
-          float: left;
-          width: 25%;
-          padding: 10px;
-          box-sizing: border-box;
-   }
+aside {
+  display: block;
+  text-align: center;
+  max-width: 100%;
+}
 
-   .row::after {
-          content: "";
-          clear: both;
-          display: table;
-   }
+figure {
+  border: 2px solid #37514D;
+  box-shadow: 4px 4px 6px #BE845E;
+  min-width: 250 px;
+  margin: auto;
+}
 
-    /* Style rules for footer content */
-    footer {
-          font-family: Baskerville, Palatino, Arial;
-          text-align: center;
-          font-size: 0.85em;
-          background-color: #B6594C;
-          color: #EEE6DE;
-          padding: 1% 0%;
-          /* Footer kept ending up in the very top of the page so I looked up a way to keep it at the bottom https://stackoverflow.com/questions/15960290/css-footer-not-displaying-at-the-bottom-of-the-page */
-          position:fixed;
-          left:0px;
-          bottom:0px;
-          height:30px;
-          width:100%;
-    }
+/* Style rules for footer content */
+footer {
+  font-family: Baskerville, Palatino, Arial;
+  text-align: center;
+  font-size: 0.85em;
+  background-color: #B6594C;
+  color: #EEE6DE;
+  padding: 0 1%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: none;
+  grid-gap: 10px;
+}
+
+/* Media Query for Tablet Viewport */
+@media screen and (min-width: 620px), print {
+
+  /* Style rules for table */
+  table {
+    border: none;
+    margin: 0 auto;
+  }
+
+  tr:nth-child(even) {
+    background-color: #B6594C;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5px;
+  }
+}
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 1000px), print {
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+  }
+}
+
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px) {
+
+  body {
+    background: linear-gradient(to bottom right, #DD8E75, #EEE6DE) fixed; /* The gradient was repeating so I had to look up how to stop that. https://stackoverflow.com/questions/2869212/css3-gradient-background-set-on-body-doesnt-stretch-but-instead-repeats */
+  }
+}
+
+/* Media Query for Print */
+@media print {
+
+  body {
+    background-color: white;
+    color: black;
+  }
+}
