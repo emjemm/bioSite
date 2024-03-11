@@ -32,22 +32,30 @@ nav ul {
   list-style-type: none;
   text-align: center;
   max-width: 100%;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
 }
 
-nav li {
-  display: block;
-  font-size: 1em;
-  font-family: "Raleway", sans-serif;
-  font-weight: lighter;
-  border-top-width: 0.5px;
+nav ul:link {
   color: #EEE6DE;
 }
 
-nav li a {
-  display: block;
-  padding: 8px;
-  background-color: #B6594C;
+nav ul:visited {
+  color: #37514D;
 }
+
+  nav li {
+    display: block;
+    font-size: 1em;
+    font-weight: lighter;
+    border-top-width: 0.5px;
+  }
+
+  nav li a {
+    display: block;
+    padding: 8px;
+    background-color: #B6594C;
+  }
 
 aside {
   display: block;
@@ -74,8 +82,8 @@ footer {
 
 .grid {
   display: grid;
-  grid-template-columns: none;
-  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  grid-gap: 5px;
 }
 
 /* Media Query for Tablet Viewport */
@@ -93,7 +101,7 @@ footer {
 
   .grid {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: none;
     grid-gap: 5px;
   }
 }
